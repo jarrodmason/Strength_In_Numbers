@@ -1,0 +1,124 @@
+ # Jarrod Mason
+# November 12th, 2022 @ 4:39 PM 
+# Description of Program: Users select if the playcall is a run or pass. Then the computer uses the PFF scores from the selected team and uses a winner depending on the reuslts. 
+
+arizonaCardinals = {'Pass Offense': 65.1, 'Run Offense' : 72.9,' Pass Rush' : 68.1, 'Pass Coverage' : 59.9, 'Run Defense' : 42.8}
+Arizona_Cardinals = arizonaCardinals
+
+atlantaFalcons = {'Pass Offense': 62.7, 'Run Offense' : 86.5,' Pass Rush' : 57.2, 'Pass Coverage' : 56.6, 'Run Defense' : 61.9}
+Atlanta_Falcons = atlantaFalcons
+
+baltimoreRavens = {'Pass Offense': 70.4, 'Run Offense' : 87.9 ,' Pass Rush' : 73.5, 'Pass Coverage' : 74.1, 'Run Defense' : 68.7}
+Balitmore_Ravens = baltimoreRavens
+
+buffaloBills = {'Pass Offense': 80.6, 'Run Offense': 90.8, 'Pass Rush': 80.8, 'Pass Coverage': 71.7, 'Run Defense': 50.8}
+Buffalo_Bills = buffaloBills
+
+carolinaPanthers = {'Pass Offense': 57.5, 'Run Offense' : 81 ,' Pass Rush' : 66.6, 'Pass Coverage' : 58, 'Run Defense' : 60}
+Carolina_Panthers = carolinaPanthers
+
+chicagoBears = {'Pass Offense': 52.4, 'Run Offense' : 85.1 ,' Pass Rush' : 55.9, 'Pass Coverage' : 57.8, 'Run Defense' : 32}
+Chicago_Bears = chicagoBears
+
+cincinnatiBengals = {'Pass Offense': 86.5, 'Run Offense' : 79.6,' Pass Rush' : 70.1, 'Pass Coverage' : 69.1, 'Run Defense' : 54.2}
+Cincinnati_Bengals = cincinnatiBengals
+
+
+clevelandBrowns = {'Pass Offense': 72.2, 'Run Offense' : 87.9 ,' Pass Rush' : 73.5, 'Pass Coverage' : 74.1, 'Run Defense' : 68.7}
+
+dallasCowboys = {'Pass Offense': 62.5, 'Run Offense' : 89.2 ,' Pass Rush' : 84.7, 'Pass Coverage' : 79.2, 'Run Defense' : 50.2}
+
+denverBroncos = {'Pass Offense': 62.3, 'Run Offense' : 66.4 ,' Pass Rush' : 76.7, 'Pass Coverage' : 88.2, 'Run Defense' : 68.3}
+
+detriotLions = {'Pass Offense': 63, 'Run Offense' : 80.8 ,' Pass Rush' : 63, 'Pass Coverage' : 49.6, 'Run Defense' : 52.6}
+
+greenBayPackers = {'Pass Offense': 76, 'Run Offense' : 90.6 ,' Pass Rush' : 74.3, 'Pass Coverage' : 71.6, 'Run Defense' : 47.2}
+
+houstonTexans = {'Pass Offense': 53.5, 'Run Offense' : 83.4 ,' Pass Rush' : 66.3, 'Pass Coverage' : 49.5, 'Run Defense' : 36.8}
+
+indianapolisColts = {'Pass Offense': 59.4, 'Run Offense' : 65.7 ,' Pass Rush' : 62.9, 'Pass Coverage' : 72.5, 'Run Defense' : 67.1}
+
+jacksonvilleJaguars = {'Pass Offense': 63.9, 'Run Offense' : 84.7 ,' Pass Rush' : 71.1, 'Pass Coverage' : 53.5, 'Run Defense' : 63.8}
+
+kansasCityChiefs = {'Pass Offense': 88, 'Run Offense' : 72 ,' Pass Rush' : 73.5, 'Pass Coverage' : 71.9, 'Run Defense' : 56.9}
+
+lasVegasRaiders = {'Pass Offense': 64.2, 'Run Offense' : 92.1 ,' Pass Rush' : 66.8, 'Pass Coverage' : 56, 'Run Defense' : 59.1}
+
+losAngelesRams = {'Pass Offense': 74.7, 'Run Offense' : 77.3 ,' Pass Rush' : 66.2, 'Pass Coverage' : 61, 'Run Defense' : 32.6}
+
+losAngelesChargers = {'Pass Offense': 65.1, 'Run Offense' : 63.3 ,' Pass Rush' : 69.8, 'Pass Coverage' : 68.4, 'Run Defense' : 90}
+
+miamiDolphins = {'Pass Offense': 90.2 , 'Run Offense' : 74.6 ,' Pass Rush' : 76.7, 'Pass Coverage' : 53.2, 'Run Defense' : 76.3}
+
+minnesotaVikings = {'Pass Offense': 70.4, 'Run Offense' : 87.9 ,' Pass Rush' : 73.5, 'Pass Coverage' : 74.1, 'Run Defense' : 68.7}
+
+newEnglandPatriots = {'Pass Offense': 65, 'Run Offense' : 75.6 ,' Pass Rush' : 70.7, 'Pass Coverage' : 74.8, 'Run Defense' : 63.3}
+
+newOrleansSaints = {'Pass Offense': 79.7, 'Run Offense' : 82.4,' Pass Rush' : 67.2, 'Pass Coverage' : 59, 'Run Defense' : 58.6}
+
+newYorkGiants = {'Pass Offense': 64.1, 'Run Offense' : 49.8 ,' Pass Rush' : 68.6, 'Pass Coverage' : 47.1, 'Run Defense' : 46.8}
+
+newYorkJets = {'Pass Offense': 48, 'Run Offense' : 73.9 ,' Pass Rush' : 80.3, 'Pass Coverage' : 86.1, 'Run Defense' : 71}
+
+philadelphiaEageles = {'Pass Offense': 84.2, 'Run Offense' : 77.6 ,' Pass Rush' : 82.3, 'Pass Coverage' : 83.8, 'Run Defense' : 62}
+
+pittsburghSteelers = {'Pass Offense': 64.7, 'Run Offense' : 71.8,' Pass Rush' : 67.5, 'Pass Coverage' : 57.5, 'Run Defense' : 66.3}
+
+sanFranscico49ers = {'Pass Offense': 67, 'Run Offense' : 78.5,' Pass Rush' : 74.9, 'Pass Coverage' : 83.9, 'Run Defense' : 78.1}
+
+seattleSeahawks = {'Pass Offense': 80.3, 'Run Offense' : 82.8 ,' Pass Rush' : 64.5, 'Pass Coverage' : 61.2, 'Run Defense' : 61.6}
+
+tampaBayBuccaneers = {'Pass Offense': 77.1, 'Run Offense' : 65.2,' Pass Rush' : 62.9, 'Pass Coverage' : 76.3, 'Run Defense' : 53.5}
+
+tenneseeTitians = {'Pass Offense': 65.7, 'Run Offense' : 88.1,' Pass Rush' : 79.3, 'Pass Coverage' : 71.8, 'Run Defense' : 78.7}
+
+washingtonCommanders = {'Pass Offense': 55.7, 'Run Offense' : 76.8 ,' Pass Rush' : 75.8, 'Pass Coverage' : 77.2, 'Run Defense' : 55.9}
+
+
+nationalFootballLeague = [Arizona_Cardinals, 'Atlanta Falcons', 'Baltmore Ravens', 'Buffalo Bills', 'Carolina Panthers', 'Chicago Bears', 'Cincinnati Bengals', 'Clevland Browns','Dallas Cowboys','Denver Broncos', 'Detriot Lions','Green Bay Packers', 'Houston Texans', 'Indianapolis Colts', 'Jacksonville Jaguars', 'Kansas City Chiefs', 'Las Vegas Raiders', 'Los Angeles Chargers', 'Los Angeles Rams', 'Miami Dolphins','Minnesota Vikings', 'New England Patriots', 'New Orleans Saints', 'New York Jets', 'New York Giants','Philadelphia Eagles', 'Pittsburgh Steelers', 'San Francisco 49ers', 'Seattle Seahawks', 'Tampa Bay Buccaneers', 'Tennessee Titans' , 'Washington Commanders']
+
+print('Hello! Welcome to our python NFL Simulation!\n\n*All of the following matchups were computed using Week 12 Data.*')
+
+print()
+for team in nationalFootballLeague:
+    print(team)
+print()  
+userTeamOne = input('What\'s the name of the team you would on Offense? (Example: detriotLions) : ' )
+print()
+if userTeamOne not in nationalFootballLeague: 
+  print("That's not a team name. Please try again.")
+  userTeamOne = input('What\'s the name of the team you would on Offense? (Example: detriotLions) : ' )
+print()
+teamOnePassOrRun = input('Would you like to run or pass the football :')
+userTeamTwo = input('What\'s the name of the team you would like on Defnese?\n(Example: greenBayPackers) :')
+
+if teamOnePassOrRun == 'run' or teamOnePassOrRun == 'Run': 
+  if arizonaCardinals.get('Run Offense') > arizonaCardinals.get('Run Defense'):
+    print('First down!')
+elif teamOnePassOrRun == 'pass' or teamOnePassOrRun == 'Pass':
+  if userTeamOne['Pass Offense'] > userTeamTwo['Pass Defense']:
+    if userTeamOne['Pass Offense'] > userTeamTwo['Pass Defense']:
+        print('Completion! Keep the chains moving!')
+    elif userTeamOne['Pass Offense'] < userTeamTwo['Pass Rush']:
+        print('Sack!!!')
+    elif userTeamOne['Pass Offense'] < userTeamTwo['Pass Defense']: 
+        print('Pick!!!')
+
+'''
+if userTeamOne and userTeamTwo not in nationalFootballLeague:
+    print('That\'s not a team name, please try again')
+
+passOrRun = input("Is the play a run or pass?:")
+if passOrRun == 'Run'or passOrRun == 'run': 
+  if userTeamOne['Run Offense'] > userteamTwo['Run Defense']:
+    print('First down!')
+  else:
+    print('Tackle for a loss!')
+if passOrRun == 'Pass'or passOrRun == 'pass':
+    if userTeamOne['Pass Offense'] > userTeamTwo['Pass Defense']:
+        print('Completion! Keep the chains moving!')
+    elif userTeamOne['Pass Offense'] < userTeamTwo['Pass Rush']:
+        print('Sack!!!')
+    elif userTeamOne['Pass Offense'] < userTeamTwo['Pass Defense']: 
+        print('Pick!!!')
+'''
