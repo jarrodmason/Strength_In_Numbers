@@ -1,424 +1,839 @@
 # Jarrod Mason
 # December 22nd, 2022 @ 8:30 PM 
-# Description of Program: Users select if the playcall is a run or pass. Then the computer uses the PFF scores from the selected team and uses a winner depending on the reuslts. 
+# Description of Program: Users select if the playcall is a run or pass. Then the computer uses player scores from the selected team and uses a winner depending on the reuslts. 
 
-
-
-print("Hello! Hopefully this program helps you to get more wins!")
+print("Hello! This program will help you to get more wins!")
 nflTeams = ['Arizona Cardinals', 'Atlanta Falcons', 'Baltmore Ravens', 'Buffalo Bills', 'Carolina Panthers', 'Chicago Bears', 'Cincinnati Bengals', 'Clevland Browns','Dallas Cowboys','Denver Broncos', 'Detriot Lions','Green Bay Packers', 'Houston Texans', 'Indianapolis Colts', 'Jacksonville Jaguars', 'Kansas City Chiefs', 'Las Vegas Raiders', 'Los Angeles Chargers', 'Los Angeles Rams', 'Miami Dolphins','Minnesota Vikings', 'New England Patriots', 'New Orleans Saints', 'New York Jets', 'New York Giants','Philadelphia Eagles', 'Pittsburgh Steelers', 'San Francisco 49ers', 'Seattle Seahawks', 'Tampa Bay Buccaneers', 'Tennessee Titans' , 'Washington Commanders']
 print()
 for team in nflTeams:
     print(team)
 print()
-team = input('What NFL Team do you want to get a report on? \nPlease enter the team\'s full name. ').lower()
+team = input('What NFL Team do you want to get a report on? \nPlease enter the team\'s full name: ').lower()
 print()
 report = input('Would you like an Offensive or Defensive Report? ').lower()
 print()
-down = input('Would you like to see a 3rd down situation report as well? \nEnter Yes or No. ').lower()
+down = input('Would you like to see a 3rd down situation report as well? \nEnter Yes or No: ').lower()
+
 
 if team == "arizona cardinals" and report == 'offensive' and down == 'yes':
-    print('Gameplan: Attack their run offense (45.2 run-blocking grade)')
-    print("3 worst offensive players: ")
+  print('Gameplan: Attack their run offense (45.2 run-blocking grade)')
+  print("3 best offensive players: Corey Clement (HB) #23, DeAndre Hopkins (WR) #10, Josh Jones (OT) #79")
+  print("3 worst offensive players: Cody Ford (G) #72, Stephen Anderson (TE) #89, Trace McSorley (QB) #19")
+  print("3rd down offensive conversion rate (8-10 yards): 38%")
+  print("3rd down offensive conversion rate (11+ yards): 10.50%")
+   
+
 elif team == "arizona cardinals" and report == 'offensive' and down == 'no':
-    print('Gameplan: Attack their run offense (45.2 run-blocking grade)')
-
+  print('Gameplan: Attack their run offense (45.2 run-blocking grade)')
+  print("3 best offensive players: Corey Clement (HB) #23, DeAndre Hopkins (WR) #10, Josh Jones (OT) #79")
+  print("3 worst offensive players: Cody Ford (G) #72, Stephen Anderson (TE) #89, Trace McSorley (QB) #19")
 elif team == "arizona cardinals" and report == 'defensive' and down == 'yes':
-    print('Gameplan: Attack their run defense (46.4 run-defense and 50.4 tackling grade)')
-elif team == "arizona cardinals" and report == 'defensive' and down == 'no':
-    print('Gameplan: Attack their run defense (46.4 run-defense and 50.4 tackling grade)')
+  print('Gameplan: Attack their run defense (46.4 run-defense and 50.4 tackling grade)')
+  print("3 best defensive players: Budda Baker (S) #3, Zach Allen (DL) #98, Trysten Hill (DL) #94")
+  print("3 worst defensive players: Jace Whittaker (CB) #39, Michael Dogbe (DL) #91, Nick Vigil (LB) #59")
+  print("3rd down offensive conversion rate (8-10 yards): 38%")
+  print("3rd down offensive conversion rate (11+ yards): 10.50%")
 
+elif team == "arizona cardinals" and report == 'defensive' and down == 'no':
+  print('Gameplan: Attack their run defense (46.4 run-defense and 50.4 tackling grade)')
+  print("3 best defensive players: Budda Baker (S) #3, Zach Allen (DL) #98, Trysten Hill (DL) #94")
+  print("3 worst defensive players: Jace Whittaker (CB) #39, Michael Dogbe (DL) #91, Nick Vigil (LB) #59")
 
 elif team == "atlanta falcons" and report == 'offensive' and down == 'yes':
-    print('Gameplan: Focus on stopping thier run offense (91.1 run grade)')
+  print('Gameplan: Focus on stopping thier run offense (91.1 run grade)')
+  print("3 best offensive players: Chris Lindstrom (G) #63, Caleb Huntley (RB) #42, Tyler Allgeier (RB) #25")
+  print("3 worst offensive players: Bryan Ecwards (WR) #89, Feleipe Franks (QB) #9, Desmond Ridder (QB) #2")
+  print("3rd down offensive conversion rate (8-10 yards): 24%")
+  print("3rd down offensive conversion rate (11+ yards): 10%")
 
 elif team == "atlanta falcons" and report == 'offensive' and down == 'no':
-    print('Gameplan: Focus on stopping thier run offense (91.1 run grade)')
+  print('Gameplan: Focus on stopping thier run offense (91.1 run grade)')
+  print("3 best offensive players: Chris Lindstrom (G) #63, Caleb Huntley (RB) #42, Tyler Allgeier (RB) #25")
+  print("3 worst offensive players: Bryan Ecwards (WR) #89, Feleipe Franks (QB) #9, Desmond Ridder (QB) #2")
 
 elif team == "atlanta falcons" and report == 'defensive' and down == 'yes':
-    print('Gameplan: Horrible at covering the pass and rushing the passer (49.5 coverage grade and 55.8 pass-rush grade)')
+  print('Gameplan: Horrible at covering the pass and rushing the passer (49.5 coverage grade and 55.8 pass-rush grade)')
+  print("3 best defensive players: Grady Jarrett (DL) #97, Ta'Quon Graham (DL) #95, Dee Alford (CB) #37")
+  print("3 worst defensive players: Adetokumbo Ogundeji (Edge) #92, Troy Anderson (LB) #44, Matt Dickerson (DL) #91.")
+  print("3rd down offensive conversion rate (8-10 yards): 24%")
+  print("3rd down offensive conversion rate (11+ yards): 10%")
+   
 elif team == "atlanta falcons" and report == 'defensive' and down == 'no':
-    print('Gameplan: Horrible at covering the pass and rushing the passer (49.5 coverage grade and 55.8 pass-rush grade)')
+  print('Gameplan: Horrible at covering the pass and rushing the passer (49.5 coverage grade and 55.8 pass-rush grade)')
+  print("3 best defensive players: Grady Jarrett (DL) #97, Ta'Quon Graham (DL) #95, Dee Alford (CB) #37")
+  print("3 worst defensive players: Adetokumbo Ogundeji (Edge) #92, Troy Anderson (LB) #44, Matt Dickerson (DL) #91.")
 
 
 elif team == "baltimore ravens" and report == 'offensive' and down == 'yes':
-    print("Gameplan: Force team to pass. Average passing offense (67.7 grade) and elite run offense (90 run grade)")
+  print("Gameplan: Force team to pass. Average passing offense (67.7 grade) and elite run offense (90 run grade)")
+  print("3 best offensive players: Gus Edwards (RB) #35, Lamar Jackson (QB) #8, Morgan Moses (OT) #78")
+  print("3 worst offensive players: Daniel Faalele (OT) #77, James Proche (WR) #3, Mike Davis (RB) #28")
+  print("3rd offensive down conversion rate (8-10 yards): 29.62%")
+  print("3rd offensive down conversion rate (11+ yards): 12.50%")
+   
 elif team == "baltimore ravens" and report == 'offensive' and down == 'no':
-    print("Gameplan: Force team to pass. Average passing offense (67.7 grade) and elite run offense (90 run grade)")
+  print("Gameplan: Force team to pass. Average passing offense (67.7 grade) and elite run offense (90 run grade)")
+  print("3 best offensive players: Gus Edwards (RB) #35, Lamar Jackson (QB) #8, Morgan Moses (OT) #78")
+  print("3 worst offensive players: Daniel Faalele (OT) #77, James Proche (WR) #3, Mike Davis (RB) #28")
+  
 elif team == "baltimore ravens" and report == 'defensive' and down == 'yes':
-    print("Gameplan: Not elite in any specific category, however poor tacklers (57.7 tackling grade). Force the Ravens to make open-field tackles.")
+  print("Gameplan: Not elite in any specific category, however poor tacklers (57.7 tackling grade). Force the Ravens to make open-field tackles.")
+  print("3 best defensive players: Michael Pierce (DL) #58, Roquan Smith (LB) #18, Kyle Hamilton (S) #14")
+  print("3 worst defensive players: Isaiah Mack (DL) #94, Kristian Welch (LB) #57, Jayln Armour-Davis (CB) #5 ")
+  print("3rd offensive down conversion rate (8-10 yards): 29.62%")
+  print("3rd offensive down conversion rate (11+ yards): 12.50%")
+   
 elif team == "baltimore ravens" and report == 'defensive' and down == 'no':
-    print("Gameplan: Not elite in any specific category, however poor tacklers (57.7 tackling grade). Force the Ravens to make open-field tackles.")
+  print("Gameplan: Not elite in any specific category, however poor tacklers (57.7 tackling grade). Force the Ravens to make open-field tackles.")
+  print("3 best defensive players: Michael Pierce (DL) #58, Roquan Smith (LB) #18, Kyle Hamilton (S) #14")
+  print("3 worst defensive players: Isaiah Mack (DL) #94, Kristian Welch (LB) #57, Jayln Armour-Davis (CB) #5 ")
 
+  
 elif team == "buffalo bills" and report == 'offensive' and down == 'yes':
-    print("Gameplan: Create one on one pass-rushing match-ups and attack their offensive lineman (62.5 pass-blocking grade).")
+  print("Gameplan: Create one on one pass-rushing match-ups and attack their offensive lineman (62.5 pass-blocking grade).")
+  print("3 best offensive players: Josh Allen (QB) #17, Stefon Diggs (WR) #14, James Cook (RB) #28")
+  print("3 worst offensive players: Quintin Morris (TE) #85, Rodger Saffold (OG) #76, Case keenum (QB) #18")
+  print("3rd offensive down conversion rate (8-10 yards): 25.92%")
+  print("3rd offensive down conversion rate (11+ yards): 36.84%")
+   
+
 elif team == "buffalo bills" and report == 'offensive' and down == 'no':
-    print("Gameplan: Create one on one pass-rushing match-ups and attack their offensive lineman (62.5 pass-blocking grade).")
+  print("Gameplan: Create one on one pass-rushing match-ups and attack their offensive lineman (62.5 pass-blocking grade).")
+  print("3 best offensive players: Josh Allen (QB) #17, Stefon Diggs (WR) #14, James Cook (RB) #28")
+  print("3 worst offensive players: Quintin Morris (TE) #85, Rodger Saffold (OG) #76, Case keenum (QB) #18")
+        
 elif team == "buffalo bills" and report == 'defensive' and down == 'yes':
-    print("Gameplan: Attack them in the run game (46.4 run-defnese grade and 30.0 tackling grade).")
+  print("Gameplan: Attack them in the run game (46.4 run-defnese grade and 30.0 tackling grade).")
+  print("3 best defensive players: Von Miller (Edge) #40, Gregory Rousseau (Edge) #50, Tremaine Edmunds (LB) #49")
+  print("3 worst defensive players: Mike Love (Edge) #56, Baylon Spector (LB) #54, C.J. Brewer (DL) #98")
+  print("3rd offensive down conversion rate (8-10 yards): 25.92%")
+  print("3rd offensive down conversion rate (11+ yards): 36.84%")
+   
+
 elif team == "buffalo bills" and report == 'defensive' and down == 'no':
-    print("Gameplan: Attack them in the run game (46.4 run-defnese grade and 30.0 tackling grade).")
+  print("Gameplan: Attack them in the run game (46.4 run-defnese grade and 30.0 tackling grade).")
+  print("3 best defensive players: Von Miller (Edge) #40, Gregory Rousseau (Edge) #50, Tremaine Edmunds (LB) #49")
+  print("3 worst defensive players: Mike Love (Edge) #56, Baylon Spector (LB) #54, C.J. Brewer (DL) #98")
 
 
 elif team == "carolina panthers" and report == 'offensive' and down == 'yes':
-    print("Gameplan: Stop the Panthers running game and force them to pass (59.2 passing grade)")
-elif team == "carolina panthers" and report == 'offensive' and down == 'no':
-    print("Gameplan: Stop the Panthers running game and force them to pass (59.2 passing grade)")
-elif team == "carolina panthers" and report == 'defensive' and down == 'yes':
-    print("Gameplan: Attack their secondary in the pass game (57.2 pass-coverage grade)")
-elif team == "carolina panthers" and report == 'defensive' and down == 'no':
-    print("Gameplan: Attack their secondary in the pass game (57.2 pass-coverage grade)")
+  print("Gameplan: Stop the Panthers running game and force them to pass (59.2 passing grade)")
+  print("3 best offensive players: Laviska Shenault Jr. (WR) #15, D'Onta Foreman (RB) #33, Sam Darnold (QB) #14")
+  print("3 worst offensive players: Shi Smith (WR) #12, Tommy Tremble (TE) #82, Jacob Eason (QB) #16") 
+  print("3rd offensive down conversion rate (8-10 yards): 16.66%")
+  print("3rd offensive down conversion rate (11+ yards): 25%")
+   
 
+elif team == "carolina panthers" and report == 'offensive' and down == 'no':
+  print("Gameplan: Stop the Panthers running game and force them to pass (59.2 passing grade)")
+  print("3 best offensive players: Laviska Shenault Jr. (WR) #15, D'Onta Foreman (RB) #33, Sam Darnold (QB) #14")
+  print("3 worst offensive players: Shi Smith (WR) #12, Tommy Tremble (TE) #82, Jacob Eason (QB) #16") 
+  
+elif team == "carolina panthers" and report == 'defensive' and down == 'yes':
+  print("Gameplan: Attack their secondary in the pass game (57.2 pass-coverage grade)")
+  print("3 best defensive players: Derrick Brown (DL) #95, Frankie Luvu (LB) #49, Jaycee Horn (CB) #8")
+  print("3 worst defensive players: Kobe Jones (Edge) #91, Brandon Smith (LB) #40, Phil Hoskins (DL) #71")
+  print("3rd offensive down conversion rate (8-10 yards): 16.66%")
+  print("3rd offensive down conversion rate (11+ yards): 25%")
+   
+    
+elif team == "carolina panthers" and report == 'defensive' and down == 'no':
+  print("Gameplan: Attack their secondary in the pass game (57.2 pass-coverage grade)")
+  print("3 best defensive players: Derrick Brown (DL) #95, Frankie Luvu (LB) #49, Jaycee Horn (CB) #8")
+  print("3 worst defensive players: Kobe Jones (Edge) #91, Brandon Smith (LB) #40, Phil Hoskins (DL) #71")
 
 elif team == "chicago bears" and report == 'offensive' and down == 'yes':
-    print("Gameplan: Great running offense, but terrible at passing offense (51.4 pass grade)")
-    print()
+  print("Gameplan: Great running offense, but terrible at passing offense (51.4 pass grade)")
+  print("3 best offensive players: Teven Jenkins (OG) #76, Braxton jones (OT) #70, Justin Fields (QB) #1")
+  print("3 worst offensive players: Nsimba Webster (WR) #83, Ihmir Smith-Marsette (WR) #17, Trevor Siemian (QB) #15")
+  print("3rd offensive down conversion rate (8-10 yards): 52.94%")
+  print("3rd offensive down conversion rate (11+ yards): 27.27%")
+   
+  
 elif team == "chicago bears" and report == 'offensive' and down == 'no':
-    print("Gameplan: Great running offense, but terrible at passing offense (51.4 pass grade)")
-    print()
+  print("Gameplan: Great running offense, but terrible at passing offense (51.4 pass grade)")
+  print("3 best offensive players: Teven Jenkins (OG) #76, Braxton jones (OT) #70, Justin Fields (QB) #1")
+  print("3 worst offensive players: Nsimba Webster (WR) #83, Ihmir Smith-Marsette (WR) #17, Trevor Siemian (QB) #15")
+
 elif team == "chicago bears" and report == 'defensive' and down == 'yes':
-    print("Gameplan: Attack their horrific run-defense (36.6 run-defense grade)")
+  print("Gameplan: Attack their horrific run-defense (36.6 run-defense grade)")
+  print("3 best defensive players: Eddie Jackson (S) #4, Matthew Adams (LB) #44, Josh Blackwell (CB) #39")
+  print("3 worst defensive players: Taco Charlton (Edge) #97, Justin Jones (DL) #93, Angelo Blackson (DL) #90")
+  print("3rd offensive down conversion rate (8-10 yards): 52.94%")
+  print("3rd offensive down conversion rate (11+ yards): 27.27%")
+
+  
 elif team == "chicago bears" and report == 'defensive' and down == 'no':
-    print("Gameplan: Attack their horrific run-defense (36.6 run-defense grade)")
-    print()
+  print("Gameplan: Attack their horrific run-defense (36.6 run-defense grade)")
+  print("3 best defensive players: Eddie Jackson (S) #4, Matthew Adams (LB) #44, Josh Blackwell (CB) #39")
+  print("3 worst defensive players: Taco Charlton (Edge) #97, Justin Jones (DL) #93, Angelo Blackson (DL) #90")
 
+  
 elif team == "cincinnati bengals" and report == 'offensive' and down == 'yes':
-    print("Gameplan: Their offense struggles in pass-blocking (58.9 pass-blocking grade)")
+  print("Gameplan: Their offense struggles in pass-blocking (58.9 pass-blocking grade)")    
+  print("3 best offensive players: Joe Burrow (QB) #9, Ja'Marr Chase (WR) #1, Tee Higgins (WR) #85")
+  print("3 worst offensive players: Mike Thomas (WR) #80, D'Ante Smith (OT) #70, Devin Asiasi (TE) #86")
+  print("3rd offensive down conversion rate (8-10 yards): 53.84%")
+  print("3rd offensive down conversion rate (11+ yards): 21.42%")
+   
 elif team == "cincinnati bengals" and report == 'offensive' and down == 'no':
-    print("Gameplan: Their offense struggles in pass-blocking (58.9 pass-blocking grade)")
+  print("Gameplan: Their offense struggles in pass-blocking (58.9 pass-blocking grade)")
+  print("3 best offensive players: Joe Burrow (QB) #9, Ja'Marr Chase (WR) #1, Tee Higgins (WR) #85")
+  print("3 worst offensive players: Mike Thomas (WR) #80, D'Ante Smith (OT) #70, Devin Asiasi (TE) #86")
+  
 elif team == "cincinnati bengals" and report == 'defensive' and down == 'yes':
-    print("Gameplan: Their defense is good everywhere except stopping the run (60.2 run-defense grade)")
-elif team == "cincinnati bengals" and report == 'defensive' and down == 'no':
-    print("Gameplan: Their defense is good everywhere except stopping the run (60.2 run-defense grade)")
+  print("Gameplan: Their defense is good everywhere except stopping the run (60.2 run-defense grade)")
+  print("3 best defensive players: D.J. Reader (DL) #98, Trey Hendrickson (Edge) #91, Germaine Pratt (LB) #57")
+  print("3 worst defensive players: Tyler Shelvin (DL) #99, Zachary Carter (DL) #95, Domenique Davis (DL) #72")
+  print("3rd offensive down conversion rate (8-10 yards): 53.84%")
+  print("3rd offensive down conversion rate (11+ yards): 21.42%")
 
+
+elif team == "cincinnati bengals" and report == 'defensive' and down == 'no':
+  print("Gameplan: Their defense is good everywhere except stopping the run (60.2 run-defense grade)")
+  print("3 best defensive players: D.J. Reader (DL) #98, Trey Hendrickson (Edge) #91, Germaine Pratt (LB) #57")
+  print("3 worst defensive players: Tyler Shelvin (DL) #99, Zachary Carter (DL) #95, Domenique Davis (DL) #72")
+  
 
 elif team == "cleveland browns" and report == 'offensive' and down == 'yes':
-    print("Gameplan: Stop their run-offense (91.5 run-offense grade) average run offense (70.6 pass-offense grade).")
+  print("Gameplan: Stop their run-offense (91.5 run-offense grade) average run offense (70.6 pass-offense grade).")
+  print("3 best offensive players: Nick Chubb (RB) #24, Joel Bitonio (OG) #75, Jacoby Brissett (QB) #7")
+  print("3 worst offensive players: Demetric Felton (WR) #25, Jerome Ford (RB) #34, Jesse James (TE) #81")
+  print("3rd offensive down conversion rate (8-10 yards): 20.69%")
+  print("3rd offensive down conversion rate (11+ yards): 16.66")
+   
+
 
 elif team == "cleveland browns" and report == 'offensive' and down == 'no':
-    print("Gameplan: Stop their run-offense (91.5 run-offense grade) average run offense (70.6 pass-offense grade).")
-
+  print("Gameplan: Stop their run-offense (91.5 run-offense grade) average run offense (70.6 pass-offense grade).")
+  print("Gameplan: Stop their run-offense (91.5 run-offense grade) average run offense (70.6 pass-offense grade).")
+  print("3 best offensive players: Nick Chubb (RB) #24, Joel Bitonio (OG) #75, Jacoby Brissett (QB) #7")
+  print("3 worst offensive players: Demetric Felton (WR) #25, Jerome Ford (RB) #34, Jesse James (TE) #81")
+  
 elif team == "cleveland browns" and report == 'defensive' and down == 'yes':
-    print("Gameplan: Horrific run-defense (31.6 run-defense and 34.7 tackling grade). It's important to run earlyand often to avoid their pass rush and secondary. ")
-
+  print("Gameplan: Horrific run-defense (31.6 run-defense and 34.7 tackling grade). It's important to run earlyand often to avoid their pass rush and secondary. ")   
+  print("3 best defensive players: Myles Garrett (Edge) #95, Jadeveon Clowney (Edge) #90, Martin Emerson (CB) #23")
+  print("3 worst defensive players: Jordan Elliott (DL) #96, Alex Wright (Edge) #94, Tommy Togiai (DL) #93")
+  
+  print("3rd offensive down conversion rate (8-10 yards): 20.69%")
+  print("3rd offensive down conversion rate (11+ yards): 16.66")
+   
 elif team == "cleveland browns" and report == 'defensive' and down == 'no':
-    print("Gameplan: Horrific run-defense (31.6 run-defense and 34.7 tackling grade). It's important to run earlyand often to avoid their pass rush and secondary. ")
-
+  print("Gameplan: Horrific run-defense (31.6 run-defense and 34.7 tackling grade). It's important to run earlyand often to avoid their pass rush and secondary. ")
+  print("3 best defensive players: Myles Garrett (Edge) #95, Jadeveon Clowney (Edge) #90, Martin Emerson (CB) #23")
+  print("3 worst defensive players: Jordan Elliott (DL) #96, Alex Wright (Edge) #94, Tommy Togiai (DL) #93")
+  
+   
 
 elif team == "dallas cowboys" and report == 'offensive' and down == 'yes':
-    print("Gameplan: #1 focus needs to be stopping their run-offense (90.8 run-offense grade)")
+  print("Gameplan: #1 focus needs to be stopping their run-offense (90.8 run-offense grade)")
+  print("3 best offensive players: Tony Pollard (RB) #20, CeeDee Lamb (WR) #88, Ezekiel Elliott (RB) #21")
+  print("3 worst offensive players: Dakoda Shepley (C) #64, Jalen Tolbert (WR) #18, Matt Farniok (OG) #68")
+  print("3rd offensive down conversion rate (8-10 yards): 39.47%")
+  print("3rd offensive down conversion rate (11+ yards): 28%")
+   
+
 
 elif team == "dallas cowboys" and report == 'offensive' and down == 'no':
-    print("Gameplan: #1 focus needs to be stopping their run-offense (90.8 run-offense grade)")
+  print("Gameplan: #1 focus needs to be stopping their run-offense (90.8 run-offense grade)")
 
+  print("3 best offensive players: Tony Pollard (RB) #20, CeeDee Lamb (WR) #88, Ezekiel Elliott (RB) #21")
+  print("3 worst offensive players: Dakoda Shepley (C) #64, Jalen Tolbert (WR) #18, Matt Farniok (OG) #68")
+
+  
 elif team == "dallas cowboys" and report == 'defensive' and down == 'yes':
-    print("Gameplan: Avoid Parsons and Diggs! Run the ball against their defense as their pass rush and coverage is elite (80.9 pass-coverage and 82.6 pass-rush grade).")
-
+  print("Gameplan: Avoid Parsons and Diggs! Run the ball against their defense as their pass rush and coverage is elite (80.9 pass-coverage and 82.6 pass-rush grade).")
+  print("3 best defensive players: Micah Parsons (Edge) #11, Demarcus Lawrence (Edge) #90, DaRon Bland (CB) #26")
+  print("3 worst defensive players: Johnathan Hankins (DL) #95, Quinton Bohanna (DL) #98, Neville Gallimore (DL) #96")
+  
+    
+  print("3rd offensive down conversion rate (8-10 yards): 39.47%")
+  print("3rd offensive down conversion rate (11+ yards): 28%")
+   
 elif team == "dallas cowboys" and report == 'defensive' and down == 'no':
-    print("Gameplan: Avoid Parsons and Diggs! Run the ball against their defense as their pass rush and coverage is elite (80.9 pass-coverage and 82.6 pass-rush grade).")
-
+  print("Gameplan: Avoid Parsons and Diggs! Run the ball against their defense as their pass rush and coverage is elite (80.9 pass-coverage and 82.6 pass-rush grade).")
+  print("3 best defensive players: Micah Parsons (Edge) #11, Demarcus Lawrence (Edge) #90, DaRon Bland (CB) #26")
+  print("3 worst defensive players: Johnathan Hankins (DL) #95, Quinton Bohanna (DL) #98, Neville Gallimore (DL) #96")
+  
 
 elif team == "denver broncos" and report == 'offensive' and down == 'yes':
-    print("Gameplan: Force the quaterback to pass the ball (61.7 passing offense grade) and stop the run.")
+  print("Gameplan: Force the quarterback to pass the ball (61.7 passing offense grade) and stop the run.")
+  print("3 best offensive players: Latavius Murray (RB) #28, Quinn Meinerz (OG) #77, Jerry Jeudy (WR) #10")
+  print("3 worst offensive players: Tom COmpton (OG) #69, Brett Rypien (QB) #4, Luke Wattenberg (OG) #60")
+  print("3rd offensive down conversion rate (8-10 yards): 25.71%")
+  print("3rd offensive down conversion rate (11+ yards): 10.81%")
+
 
 elif team == "denver broncos" and report == 'offensive' and down == 'no':
-    print("Gameplan: Force Russ to pass the ball (61.7 passing offense grade) and stop the run.")
-    print()
-
+  print("Gameplan: Force Russ to pass the ball (61.7 passing offense grade) and stop the run.")
+  print("3 best offensive players: Latavius Murray (RB) #28, Quinn Meinerz (OG) #77, Jerry Jeudy (WR) #10")
+  print("3 worst offensive players: Tom COmpton (OG) #69, Brett Rypien (QB) #4, Luke Wattenberg (OG) #60")
+ 
 elif team == "denver broncos" and report == 'defensive' and down == 'yes':
-    print("Gameplan: Defense with an elite secondary, good pass-rush, but is weak against the run (69.1 run-defense grade)")
-    print()
+  print("Gameplan: Defense with an elite secondary, good pass-rush, but is weak against the run (69.1 run-defense grade)")
+  print("3 best defensive players: Partrick Surtain II (CB) #2, P.J. Locke (S) #6, Alex Singleton (LB) #49")
+  print("3 worst defensive players: Dre'Mont Jones (DL) #93, Nik Bonitto (Edge) #42, Jonathan Kongbo (Edge) #90")
+  print("3rd offensive down conversion rate (8-10 yards): 25.71%")
+  print("3rd offensive down conversion rate (11+ yards): 10.81%")
 
 elif team == "denver broncos" and report == 'defensive' and down == 'no':
-    print("Gameplan: Defense with an elite secondary, good pass-rush, but is weak against the run (69.1 run-defense grade)")
-    print()
-
+  print("Gameplan: Defense with an elite secondary, good pass-rush, but is weak against the run (69.1 run-defense grade)")
+  print("3 best defensive players: Partrick Surtain II (CB) #2, P.J. Locke (S) #6, Alex Singleton (LB) #49")
+  print("3 worst defensive players: Dre'Mont Jones (DL) #93, Nik Bonitto (Edge) #42, Jonathan Kongbo (Edge) #90")
+ 
 
 elif team == "detroit lions" and report == 'offensive' and down == 'yes':
-    print("Gameplan: Well-balanced offense but the offensive line is beatable (61.7 pass-blocking grade)")
+  print("Gameplan: Well-balanced offense but the offensive line is beatable (61.7 pass-blocking grade)")
 
+  print("3 best offensive players: Amon-Ra St. Brown (WR) #14, Penei Sewell (OT) #58, Frank Ragnow (C) #77")
+  print("3 worst offensive players: Matt Nelson (OT) #67, Dan Skipper (OG) #70, Logan Stenberg (OG) #71")
+  print("3rd offensive down conversion rate (8-10 yards): 48.40%")
+  print("3rd offensive down conversion rate (11+ yards): 28%")
+ 
 elif team == "detroit lions" and report == 'offensive' and down == 'no':
-    print("Gameplan: Well-balanced offense but the offensive line is beatable (61.7 pass-blocking grade)")
-    print()
+  print("Gameplan: Well-balanced offense but the offensive line is beatable (61.7 pass-blocking grade)")
 
+  print("3 best offensive players: Amon-Ra St. Brown (WR) #14, Penei Sewell (OT) #58, Frank Ragnow (C) #77")
+  print("3 worst offensive players: Matt Nelson (OT) #67, Dan Skipper (OG) #70, Logan Stenberg (OG) #71")
+  
 elif team == "detroit lions" and report == 'defensive' and down == 'yes':
     print("Gameplan: Good pass-rush but the defense struggles in all other areas. Focus on attacking them in coverage (48.3 pass-coverage grade)")
 
+
+    print("3 best defensive players: Aidan Hutchinson (Edge) #97, C.J. Moore (S) #38, Alim McNeil (DL) #54")
+    print("3 worst offensive players: Chase Lucas (CB) #36, Demetrius Taylor (DL) #52, Amani Oruwariye (CB) #24")
+    print("3rd offensive down conversion rate (8-10 yards): 48.40%")
+    print("3rd offensive down conversion rate (11+ yards): 28%")
+ 
+
+
 elif team == "detroit lions" and report == 'defensive' and down == 'no':
-    print("Gameplan: Good pass-rush but the defense struggles in all other areas. Focus on attacking them in coverage (48.3 pass-coverage grade)")
+  print("Gameplan: Good pass-rush but the defense struggles in all other areas. Focus on attacking them in coverage (48.3 pass-coverage grade)")
+  print("3 best defensive players: Aidan Hutchinson (Edge) #97, C.J. Moore (S) #38, Alim McNeil (DL) #54")
+  print("3 worst offensive players: Chase Lucas (CB) #36, Demetrius Taylor (DL) #52, Amani Oruwariye (CB) #24")
 
 
 elif team == "green bay packers" and report == 'offensive' and down == 'yes':
     print("Gameplan: This offense struggles in blocking against the run (57.8 run-blocking grade) so it's vital to attack their run-blockers")
+    print("3 best offensive players: Aaron Jones (RB) #33, David Bakhtiari (OT) #69, A.J. Dillon (RB) #28")
+    print("3 worst offensive players: Juwann Winfree (WR) #88, Samori Toure (WR) #83, Jake Hanson (OG) #67")
+    print("3rd offensive down conversion rate (8-10 yards): 40.90%")
+    print("3rd offensive down conversion rate (11+ yards): 5.88%")
+
 
 elif team == "green bay packers" and report == 'offensive' and down == 'no':
-    print("Gameplan: This offense struggles in blocking against the run (57.8 run-blocking grade) so it's vital to attack their run-blockers")
-
+  print("Gameplan: This offense struggles in blocking against the run (57.8 run-blocking grade) so it's vital to attack their run-blockers")
+  print("3 best offensive players: Aaron Jones (RB) #33, David Bakhtiari (OT) #69, A.J. Dillon (RB) #28")
+  print("3 worst offensive players: Juwann Winfree (WR) #88, Samori Toure (WR) #83, Jake Hanson (OG) #67")
+    
 elif team == "green bay packers" and report == 'defensive' and down == 'yes':
-    print("Gameplan: Attack their run-defense (48.0 run-defense grade) by running the ball")
+  print("Gameplan: Attack their run-defense (48.0 run-defense grade) by running the ball")
 
+  print("3 best defensive players: Laremy Tunsil, Amari Rodgers, Dameon Pierce")
+  print("3 worst defensive players: Rashan Gary (Edge) #52, Jaire Alexander (CB) #23, Rudy Ford (S) #20")
+
+  print("3rd offensive down conversion rate (8-10 yards): 40.90%")
+  print("3rd offensive down conversion rate (11+ yards): 5.88%")
 elif team == "green bay packers" and report == 'defensive' and down == 'no':
-    print("Gameplan: Attack their run-defense (48.0 run-defense grade) by running the ball")
+  print("Gameplan: Attack their run-defense (48.0 run-defense grade) by running the ball")
+
+  print("3 best defensive players: Laremy Tunsil, Amari Rodgers, Dameon Pierce")
+  print("3 worst defensive players: Rashan Gary (Edge) #52, Jaire Alexander (CB) #23, Rudy Ford (S) #20")
 
 
 elif team == "houston texans" and report == 'offensive' and down == 'yes':
-    print("Gameplan: Force them to pass the ball (55.1 pass-offense) and stop their running game")
+  print("Gameplan: Force them to pass the ball (55.1 pass-offense) and stop their running game")
+  print("3 best defensive players: Laremy Tunsil (OT) #78, Dameon Pierce (RB) #31, Nico Collins (WR) #12")
+  print("3 worst offensive players: Kenyon Green (OG) #59, Kyle Allen (QB) #3, K.C. McDermott (OT) #62")
+  print("3rd offensive down conversion rate (8-10 yards): 47.05%")
+  print("3rd offensive down conversion rate (11+ yards): 4.76%")
+ 
+
 
 elif team == "houston texans" and report == 'offensive' and down == 'no':
-    print("Gameplan: Force them to pass the ball (55.1 pass-offense) and stop their running game")
+  print("Gameplan: Force them to pass the ball (55.1 pass-offense) and stop their running game")
+  print("3 best defensive players: Laremy Tunsil (OT) #78, Dameon Pierce (RB) #31, Nico Collins (WR) #12")
+  print("3 worst offensive players: Kenyon Green (OG) #59, Kyle Allen (QB) #3, K.C. McDermott (OT) #62")
 
 elif team == "houston texans" and report == 'defensive' and down == 'yes':
-    print("Gameplan: Run the ball against their defense (35.0 run-defense grade)")
+  print("Gameplan: Run the ball against their defense (35.0 run-defense grade)")
 
+
+  print("3 best defensive players: Ogbonnia Okoronkwo (Edge) #45, Desmond King II (CB) #25, Jerry Hughes (Edge) #55")
+  print("3 worst defensive players: Michael Dwumfour (DL) #50, Kamu Grugier-Hill (LB) #51, Christian Harris (LB) #48")
+
+  print("3rd offensive down conversion rate (8-10 yards): 47.05%")
+  print("3rd offensive down conversion rate (11+ yards): 4.76%")
+ 
 elif team == "houston texans" and report == 'defensive' and down == 'no':
-    print("Gameplan: Run the ball against their defense (35.0 run-defense grade)")
+  print("Gameplan: Run the ball against their defense (35.0 run-defense grade)") 
+  print("3 best defensive players: Ogbonnia Okoronkwo (Edge) #45, Desmond King II (CB) #25, Jerry Hughes (Edge) #55")
+  print("3 worst defensive players: Michael Dwumfour (DL) #50, Kamu Grugier-Hill (LB) #51, Christian Harris (LB) #48")
 
 
 elif team == "indianapolis colts" and report == 'offensive' and down == 'yes':
     print("Gameplan: Blitz, the colts have one of the worst offensive lines in the league (59.8 pass-blocking grade)")
 
-elif team == "indianapolis colts" and report == 'offensive' and down == 'no':
-    print("Gameplan: Blitz, the colts have one of the worst offensive lines in the league (59.8 pass-blocking grade)")
+    print("3 best offensive players: Ashton Dulin (WR) #16, Braden Smith (OT) #72, Michael Pittman Jr. (WR) #11")
+    print("3 worst offensive players: Matt Pryor (OT) #69, Nick Foles (QB) #9, Keke Coutee (WR) #15")
+    print("3rd offensive down conversion rate (8-10 yards): 45.83% ") 
+    print("3rd offensive down conversion rate (11+ yards): 16.66%")
 
+
+
+elif team == "indianapolis colts" and report == 'offensive' and down == 'no':
+  print("Gameplan: Blitz, the colts have one of the worst offensive lines in the league (59.8 pass-blocking grade)")
+
+  print("3 best offensive players: Ashton Dulin (WR) #16, Braden Smith (OT) #72, Michael Pittman Jr. (WR) #11")
+  print("3 worst offensive players: Matt Pryor (OT) #69, Nick Foles (QB) #9, Keke Coutee (WR) #15")
+  
 elif team == "indianapolis colts" and report == 'defensive' and down == 'yes':
-    print("Gameplan: Pass the ball against this defense (62.9 pass-rush grade). Avoid Gilmore and Moore. ")
+  print("Gameplan: Pass the ball against this defense (62.9 pass-rush grade). Avoid Gilmore and Moore. ")
+
+  print("3 best defensive players: Isaiah Rodgers (CB) #34, Stephon Gilmore (CB) # 5, DeForest Buckner (DL) #99")
+  print("3 worst defensive players: Kameron Cline (Edge) #92, Shaq Leonard (LB) #53, Bryon Cowart (DL) #96")
+
+
+  print("3rd offensive down conversion rate (8-10 yards): 45.83% ") 
+  print("3rd offensive down conversion rate (11+ yards): 16.66%")
+
 
 elif team == "indianapolis colts" and report == 'defensive' and down == 'no':
-    print("Gameplan: Pass the ball against this defense (62.9 pass-rush grade). Avoid Gilmore and Moore. ")
-    print()
+  print("Gameplan: Pass the ball against this defense (62.9 pass-rush grade). Avoid Gilmore and Moore. ")
+
+  print("3 best defensive players: Isaiah Rodgers (CB) #34, Stephon Gilmore (CB) # 5, DeForest Buckner (DL) #99")
+  print("3 worst defensive players: Kameron Cline (Edge) #92, Shaq Leonard (LB) #53, Bryon Cowart (DL) #96")
 
 
 elif team == "jacksonville jaguars" and report == 'offensive' and down == 'yes':
     print("Gameplan: Solid everywhere offensivley but can be defeated in the run game (48.6 run-blocking grade)")
 
-elif team == "jacksonville jaguars" and report == 'offensive' and down == 'no':
-    print("Gameplan: Solid everywhere offensivley but can be defeated in the run game (48.6 run-blocking grade)")
+    print("3 best offensive players: Trevor Lawrence (QB) #16, Jamal Agnew (WR) #39, Luke Farrell (TE) #89")
+    print("3 worst offensive players: Tim Jones (WR) #15, Luke Fortner (C) #79, Cole Van Lanen (OG) #70")
+    print("3rd offensive down conversion rate (8-10 yards): 44.11%")
+    print("3rd offensive down conversion rate (11+ yards): 14.29")
 
+
+
+elif team == "jacksonville jaguars" and report == 'offensive' and down == 'no':
+  print("Gameplan: Solid everywhere offensivley but can be defeated in the run game (48.6 run-blocking grade)")
+
+  print("3 best offensive players: Trevor Lawrence (QB) #16, Jamal Agnew (WR) #39, Luke Farrell (TE) #89")
+  print("3 worst offensive players: Tim Jones (WR) #15, Luke Fortner (C) #79, Cole Van Lanen (OG) #70")
+ 
 elif team == "jacksonville jaguars" and report == 'defensive' and down == 'yes':
-    print("Gameplan: Force the defense to make open field tackles and get defenders out in space (32.9 tackling grade) ")
+  print("Gameplan: Force the defense to make open field tackles and get defenders out in space (32.9 tackling grade) ")
+
+
+  print("3 best defensive players: Shaquille Quarterman (LB) #50, Tyson Campbell (CB) #32, Andrew Wingard (S) #42")
+  print("3 worst defensive players: Chris Claybrooks (CB) #6, Montaric Brown (CB) #30, De'Shaan Dixon (Edge) #47")
+
+
+  print("3rd offensive down conversion rate (8-10 yards): 44.11%")
+  print("3rd offensive down conversion rate (11+ yards): 14.29")
+
 
 elif team == "jacksonville jaguars" and report == 'defensive' and down == 'no':
-    print("Gameplan: Force the defense to make open field tackles and get defenders out in space (32.9 tackling grade) ")
+  print("Gameplan: Force the defense to make open field tackles and get defenders out in space (32.9 tackling grade) ")
+
+  print("3 best defensive players: Shaquille Quarterman (LB) #50, Tyson Campbell (CB) #32, Andrew Wingard (S) #42")
+  print("3 worst defensive players: Chris Claybrooks (CB) #6, Montaric Brown (CB) #30, De'Shaan Dixon (Edge) #47")
 
 
 elif team == "kansas city chiefs" and report == 'offensive' and down == 'yes':
     print("Gameplan: One of the most prolific pass offenses in NFL history. Force the ball out of Mahomes hands. (75.3 run-offense grade) ")
+    print("3 best offensive players: Travis Kelce (TE) #87, Patrick Mahomes (QB) #15, Creed Humphrey (C) #52")
+    print("3 worst offensive players: Justin Watson (WR) #84, Ronald Jones(HB) #2, Geron Christian Sr. (OT) #74")
+    print("3rd offensive down conversion rate (8-10 yards): 54.16%")
+    print("3rd offensive down conversion rate (11+ yards):  38.88%")
+
+
 
 elif team == "kansas city chiefs" and report == 'offensive' and down == 'no':
-    print("Gameplan: One of the most prolific pass offenses in NFL history. Force the ball out of Mahomes hands. (75.3 run-offense grade) ")
-
+  print("Gameplan: One of the most prolific pass offenses in NFL history. Force the ball out of Mahomes hands. (75.3 run-offense grade) ")
+  print("3 best offensive players: Travis Kelce (TE) #87, Patrick Mahomes (QB) #15, Creed Humphrey (C) #52")
+  print("3 worst offensive players: Justin Watson (WR) #84, Ronald Jones(HB) #2, Geron Christian Sr. (OT) #74")
+  
 elif team == "kansas city chiefs" and report == 'defensive' and down == 'yes':
-    print("Gameplan: The team struggles tackling and stopping the run (43.3 tackling and 60.4 run-defense grade) So running the ball and avoiding their pass-rush and secondary will lead to success.")
+  print("Gameplan: The team struggles tackling and stopping the run (43.3 tackling and 60.4 run-defense grade) So running the ball and avoiding their pass-rush and secondary will lead to success.")
+  
+
+  print("3 best defensive players: Chris Jones (DL) #95, Deon Bush (S) #26, L'Jarius Sneed (CB) #38")
+  print("3 worst defensive players: Elijah Lee (LB) #44, Derrick Nnadi (DL) #91, Taylor Stallworth (DL) #90")
+
+
+  print("3rd offensive down conversion rate (8-10 yards): 54.16%")
+  print("3rd offensive down conversion rate (11+ yards):  38.88%")
 
 elif team == "kansas city chiefs" and report == 'defensive' and down == 'no':
-    print("Gameplan: The team struggles tackling and stopping the run (43.3 tackling and 60.4 run-defense grade) So running the ball and avoiding their pass-rush and secondary will lead to success.")
+  print("Gameplan: The team struggles tackling and stopping the run (43.3 tackling and 60.4 run-defense grade) So running the ball and avoiding their pass-rush and secondary will lead to success.")
+
+
+  print("3 best defensive players: Chris Jones (DL) #95, Deon Bush (S) #26, L'Jarius Sneed (CB) #38")
+  print("3 worst defensive players: Elijah Lee (LB) #44, Derrick Nnadi (DL) #91, Taylor Stallworth (DL) #90")
+
 
 
 elif team == "las vegas radiers" and report == 'offensive' and down == 'yes':
     print("Gameplan: Elite skill position players, but their offensive line is weak in the run game (57.9 run-blocking grade)")
+    print("3 best offensive players: Josh Jacobs (RB) #28, Davante Adams (WR) #17, Kolton Miller (OT) #74")
+    print("3 worst offensive players: Alex Bars (OG) #64, Keelan Cole (WR) #84, DJ Turner (WR) #19")
+    print("3rd offensive down conversion rate (8-10 yards): 31.03%")
+    print("3rd offensive down conversion rate (11+ yards): 21.42")
+
+
+
 
 elif team == "las vegas radiers" and report == 'offensive' and down == 'no':
-    print("Gameplan: Elite skill position players, but their offensive line is weak in the run game (57.9 run-blocking grade)")
-
+  print("Gameplan: Elite skill position players, but their offensive line is weak in the run game (57.9 run-blocking grade)")
+  print("3 best offensive players: Josh Jacobs (RB) #28, Davante Adams (WR) #17, Kolton Miller (OT) #74")
+  print("3 worst offensive players: Alex Bars (OG) #64, Keelan Cole (WR) #84, DJ Turner (WR) #19")
+   
 elif team == "las vegas radiers" and report == 'defensive' and down == 'yes':
-    print("Gameplan: Attack their secondary or attack their run defense (58.5 run-defense and 55.2 pass-coverage grade)")
+  print("Gameplan: Attack their secondary or attack their run defense (58.5 run-defense and 55.2 pass-coverage grade)")
+
+
+  print("3 best defensive players: Maxx Crosby (Edge) #98, Tyler Hall (CB) #37, Andrew Billings (DL) #97")
+  print("3 worst defensive players: Jayon Brown (LB) #50, Sidney Jones (CB) #31, Jerry Tillery (DL) #90")
+
+
+  print("3rd offensive down conversion rate (8-10 yards): 31.03%")
+  print("3rd offensive down conversion rate (11+ yards): 21.42")
 
 elif team == "las vegas radiers" and report == 'defensive' and down == 'no':
-    print("Gameplan: Attack their secondary or attack their run defense (58.5 run-defense and 55.2 pass-coverage grade)")
+  print("Gameplan: Attack their secondary or attack their run defense (58.5 run-defense and 55.2 pass-coverage grade)")
+
+  print("3 best defensive players: Maxx Crosby (Edge) #98, Tyler Hall (CB) #37, Andrew Billings (DL) #97")
+  print("3 worst defensive players: Jayon Brown (LB) #50, Sidney Jones (CB) #31, Jerry Tillery (DL) #90")
+
 
 
 elif team == "los angeles chargers" and report == 'offensive' and down == 'yes':
     print("Gameplan: Focus on winning one-on-one matchups with their offensive lines (42.9 run-blocking and 63.4 pass-blocking grade)")
 
-elif team == "los angeles chargers" and report == 'offensive' and down == 'no':
-    print("Gameplan: Focus on winning one-on-one matchups with their offensive lines (42.9 run-blocking and 63.4 pass-blocking grade)")
+    print("3 best offensive players: Keenan Allen (WR) #13, Austin Ekeler (RB) #30, Justin Herbert (QB) #10")
+    print("3 worst offensive players: Foster Sarell (OT) #73, Tre' McKitty (TE) #88, Brenden Jaimes (OG) #64")
+    print("3rd offensive down conversion rate (8-10 yards): 23%")
+    print("3rd offensive down conversion rate (11+ yards): 16.21")
 
+
+elif team == "los angeles chargers" and report == 'offensive' and down == 'no':
+  print("Gameplan: Focus on winning one-on-one matchups with their offensive lines (42.9 run-blocking and 63.4 pass-blocking grade)")
+
+  print("3 best offensive players: Keenan Allen (WR) #13, Austin Ekeler (RB) #30, Justin Herbert (QB) #10")
+  print("3 worst offensive players: Foster Sarell (OT) #73, Tre' McKitty (TE) #88, Brenden Jaimes (OG) #64")
+   
 elif team == "los angeles chargers" and report == 'defensive' and down == 'yes':
-    print("Gameplan: Run the ball against this defesne to get positive gains (35.7 run-defense grade)")
+  print("Gameplan: Run the ball against this defesne to get positive gains (35.7 run-defense grade)")
+
+  print("3 best defensive players: Troy Reeder (LB) #42, Joey Bosa (Edge) #97, Derwin James (S) #3")
+  print("3 worst defensive players: Christian Covington (DL) #95, Tyeler Davison (DL) #90, J.C. Jackson (CB) #27")
+
+  print("3rd offensive down conversion rate (8-10 yards): 23%")
+  print("3rd offensive down conversion rate (11+ yards): 16.21")
+
 
 elif team == "los angeles chargers" and report == 'defensive' and down == 'no':
-    print("Gameplan: Run the ball against this defesne to get positive gains (35.7 run-defense grade)")
+  print("Gameplan: Run the ball against this defesne to get positive gains (35.7 run-defense grade)")
+  print("3 best defensive players: Troy Reeder (LB) #42, Joey Bosa (Edge) #97, Derwin James (S) #3")
+  print("3 worst defensive players: Christian Covington (DL) #95, Tyeler Davison (DL) #90, J.C. Jackson (CB) #27")
 
 
 elif team == "los angeles rams" and report == 'offensive' and down == 'yes':
     print("Gameplan: Terrible offensive line and horrible at running the ball (60.0 run-offense, 58.6 pass-blocking, 58.4 run-blocking grade)")
 
-elif team == "los angeles rams" and report == 'offensive' and down == 'no':
-    print("Gameplan: Terrible offensive line and horrible at running the ball (60.0 run-offense, 58.6 pass-blocking, 58.4 run-blocking grade)")
+    print("3 best offensive players: Cooper Kupp (WR) #10, Cam Akers (RB) #3, Tutu Atwell (WR) #15")
+    print("3 worst offensive players: John Wolford (QB) #13, Jeremiah Kolone (C) #62, Bobby Evans (OG) #71 ")
+    print("3rd offensive down conversion rate (8-10 yards): 25%")
+    print("3rd offensive down conversion rate (11+ yards): 13.04%")
 
+
+
+elif team == "los angeles rams" and report == 'offensive' and down == 'no':
+  print("Gameplan: Terrible offensive line and horrible at running the ball (60.0 run-offense, 58.6 pass-blocking, 58.4 run-blocking grade)")
+
+  print("3 best offensive players: Cooper Kupp (WR) #10, Cam Akers (RB) #3, Tutu Atwell (WR) #15")
+  print("3 worst offensive players: John Wolford (QB) #13, Jeremiah Kolone (C) #62, Bobby Evans (OG) #71 ")
+  
 elif team == "los angeles rams" and report == 'defensive' and down == 'yes':
     print("Gameplan: Avoid Aaron Donald and Jalen Ramsey at all costs! All the other secondary defenders can be defeated (64.3 pass-coverage grade)")
 
-elif team == "los angeles rams" and report == 'defensive' and down == 'no':
-    print("Gameplan: Avoid Aaron Donald and Jalen Ramsey at all costs! All the other secondary defenders can be defeated (64.3 pass-coverage grade)")
 
+    print("3 best defensive players: Bobby Wagner (LB) #45, Aaron Donald (DL) #99, Jalen Ramsey (CB) #5")
+    print("3 worst defensive players: Daniel Hardy (Edge) #44, Terrell Lewis (Edge) #52, Derion Kendrick (CB) #6")
+    print("3rd offensive down conversion rate (8-10 yards): 25%")
+    print("3rd offensive down conversion rate (11+ yards): 13.04%")
+
+
+elif team == "los angeles rams" and report == 'defensive' and down == 'no':
+  print("Gameplan: Avoid Aaron Donald and Jalen Ramsey at all costs! All the other secondary defenders can be defeated (64.3 pass-coverage grade)")
+
+
+  print("3 best defensive players: Bobby Wagner (LB) #45, Aaron Donald (DL) #99, Jalen Ramsey (CB) #5")
+  print("3 worst defensive players: Daniel Hardy (Edge) #44, Terrell Lewis (Edge) #52, Derion Kendrick (CB) #6")
+ 
 
 elif team == "miami dolphins" and report == 'offensive' and down == 'yes':
     print("Gameplan: Elite pass-catchers however their offensive line isn't the greatest (56.5 pass-blocking grade)")
+    print("3 best offensive players: Tyreek Hill (WR) #10, Jaylen Waddle (WR) #17, Tua Tagovailoa (QB) #1")
+    print("3 worst offensive players: Chase Edmonds (RB) #2, Greg Little (OT) #75, Tanner Conner (TE) #80")
+    print("3rd offensive down conversion rate (8-10 yards): 36%")
+    print("3rd offensive down conversion rate (11+ yards): 14.70%")
+
+
 
 elif team == "miami dolphins" and report == 'offensive' and down == 'no':
-    print("Gameplan: Elite pass-catchers however their offensive line isn't the greatest (56.5 pass-blocking grade)")
-
+  print("Gameplan: Elite pass-catchers however their offensive line isn't the greatest (56.5 pass-blocking grade)")
+  print("3 best offensive players: Tyreek Hill (WR) #10, Jaylen Waddle (WR) #17, Tua Tagovailoa (QB) #1")
+  print("3 worst offensive players: Chase Edmonds (RB) #2, Greg Little (OT) #75, Tanner Conner (TE) #80")
+ 
 elif team == "miami dolphins" and report == 'defensive' and down == 'yes':
-    print("Gameplan: Good pass-rushers but poor in their secondary (53.8 pass-coverage grade)")
+  print("Gameplan: Good pass-rushers but poor in their secondary (53.8 pass-coverage grade)")
+
+  print("3 best defensive players: Jaelan Phillips (Edge) #15, Christian Wilkins (DL) #94, Andrew Van Ginkel (Edge) #43")
+  print("3 worst defensive players: Raekwon Davis (DL) #98, Channing Tindall (LB) #41, Sam Eguavoen (LB) #49")
+
+
+
+  print("3rd offensive down conversion rate (8-10 yards): 36%")
+  print("3rd offensive down conversion rate (11+ yards): 14.70%")
 
 elif team == "miami dolphins" and report == 'defensive' and down == 'no':
     print("Gameplan: Good pass-rushers but poor in their secondary (53.8 pass-coverage grade)")
+    print("3 best defensive players: Jaelan Phillips (Edge) #15, Christian Wilkins (DL) #94, Andrew Van Ginkel (Edge) #43")
+    print("3 worst defensive players: Raekwon Davis (DL) #98, Channing Tindall (LB) #41, Sam Eguavoen (LB) #49")
 
 
 elif team == "minnesota vikings" and report == 'offensive' and down == 'yes':
     print("Gameplan: Elite offense but average offensive-line (63.5 pass-blocking grade)")
 
+    print("3 best offensive players: Justin Jefferson (WR) #18, Christian Darrisaw (OT) #71, Brian O'Neill (OT) #75")
+    print("3 worst offensive players: Johnny Mundt (TE) #86, Kene Nwangwu (RB) #26, Austin Schlottmann (C) #65")
+    print("3rd offensive down conversion rate (8-10 yards): 29.03%")
+    print("3rd offensive down conversion rate (11+ yards): 10.34%")
+
+
 elif team == "minnesota vikings" and report == 'offensive' and down == 'no':
     print("Gameplan: Elite offense but average offensive-line (63.5 pass-blocking grade)")
+    print("3 best offensive players: Justin Jefferson (WR) #18, Christian Darrisaw (OT) #71, Brian O'Neill (OT) #75")
+    print("3 worst offensive players: Johnny Mundt (TE) #86, Kene Nwangwu (RB) #26, Austin Schlottmann (C) #65")
+       
 
 elif team == "minnesota vikings" and report == 'defensive' and down == 'yes':
     print("Gameplan: Great all-around defense but struggles in pass-coverage (62.6 pass-coverage grade)")
+    print("3 best defensive players: Danielle Hunter (Edge) #99, Za'Darius Smith (Edge) #55, Josh Metellus (S) #44")
+    print("3 worst defensive players: Andrew Booth Jr. (CB) #23, Luiji Vilain (Edge) #43, Troy Dye (LB) #45")
+
+    print("3rd offensive down conversion rate (8-10 yards): 29.03%")
+    print("3rd offensive down conversion rate (11+ yards): 10.34%")
 
 elif team == "minnesota vikings" and report == 'defensive' and down == 'no':
     print("Gameplan: Great all-around defense but struggles in pass-coverage (62.6 pass-coverage grade)")
+    print("3 best defensive players: Danielle Hunter (Edge) #99, Za'Darius Smith (Edge) #55, Josh Metellus (S) #44")
+    print("3 worst defensive players: Andrew Booth Jr. (CB) #23, Luiji Vilain (Edge) #43, Troy Dye (LB) #45")
 
 
 elif team == "new england patriots" and report == 'offensive' and down == 'yes':
     print("Gameplan: Attack their offensive line in the run game (56.1 run-offense grade)")
+    print("3 best offensive players: Marcus Jones (CB) #25, Rhamondre Stevenson (RB) #38, Pierre Strong Jr. (RB) #35")
+    print("3 worst offensive players: Scotty Washington (TE) #88, J.J. Taylor (RB) #42, Cole Strange (OG) #69")
+    print("3rd offensive down conversion rate (8-10 yards): 38.46%")
+    print("3rd offensive down conversion rate (11+ yards): 19.35%")
+
+
+
 
 elif team == "new england patriots" and report == 'offensive' and down == 'no':
     print("Gameplan: Attack their offensive line in the run game (56.1 run-offense grade)")
 
+
+    print("3 best offensive players: Marcus Jones (CB) #25, Rhamondre Stevenson (RB) #38, Pierre Strong Jr. (RB) #35")
+    print("3 worst offensive players: Scotty Washington (TE) #88, J.J. Taylor (RB) #42, Cole Strange (OG) #69")
+
 elif team == "new england patriots" and report == 'defensive' and down == 'yes':
     print("Gameplan: Solid defense all-around but average in their run-defense (65.5 run-defense grade)")
+    print("3 best defensive players: Josh Uche (Edge) #55, Ja'Whaun Bentley (LB) #8, Jabrill Peppers (S) #3")
+    print("3 worst defensive players: Raekwon McMillan (LB) #50, Joshuah Bledsoe (S) #24, Shaun Wade (CB) #26")
+
+   
+    print("3rd offensive down conversion rate (8-10 yards): 38.46%")
+    print("3rd offensive down conversion rate (11+ yards): 19.35%")
+
 
 elif team == "new england patriots" and report == 'defensive' and down == 'no':
     print("Gameplan: Solid defense all-around but average in their run-defense (65.5 run-defense grade)")
+    print("3 best defensive players: Josh Uche (Edge) #55, Ja'Whaun Bentley (LB) #8, Jabrill Peppers (S) #3")
+    print("3 worst defensive players: Raekwon McMillan (LB) #50, Joshuah Bledsoe (S) #24, Shaun Wade (CB) #26")
+
 
 
 elif team == "new orleans saints" and report == 'offensive' and down == 'yes':
     print("Gameplan: Poor offensive line (61.7 pass-blocking and 53.4 run-blocking grade), so send four defenders when possible.")
 
+    print("3 best offensive players: Andy Dalton (QB) #14, Chris Olave (WR) #12, Rashid Shaheed (WR) #89")
+    print("3 worst offensive players: Calvin Throckmorto (OG) #76, Nick Vannett (TE) #81, Lewis Kidd (OG) #66")
+    print("3rd offensive down conversion rate (8-10 yards): 40.74%")
+    print("3rd offensive down conversion rate (11+ yards): 13.64%")
+
+
 elif team == "new orleans saints" and report == 'offensive' and down == 'no':
     print("Gameplan: Poor offensive line (61.7 pass-blocking and 53.4 run-blocking grade), so send four defenders when possible.")
 
+    print("3 best offensive players: Andy Dalton (QB) #14, Chris Olave (WR) #12, Rashid Shaheed (WR) #89")
+    print("3 worst offensive players: Calvin Throckmorto (OG) #76, Nick Vannett (TE) #81, Lewis Kidd (OG) #66")
+
 elif team == "new orleans saints" and report == 'defensive' and down == 'yes':
     print("Gameplan: Run the ball against this defense (57.9 run-defense grade)")
+    print("3 best defensive players: Kaden Elliss (LB) #55, Carl Granderson (Edge) #96, Tyrann Mathieu (S) #32")
+    print("3 worst defensive players: Jabari Zuniga (Edge) #69, DaMarcus Fields (CB) #39, Christian Ringo (DL) #57")
+    print("3rd offensive down conversion rate (8-10 yards): 40.74%")
+    print("3rd offensive down conversion rate (11+ yards): 13.64%")
+
+
 
 elif team == "new orleans saints" and report == 'defensive' and down == 'no':
     print("Gameplan: Run the ball against this defense (57.9 run-defense grade)")
+    print("3 best defensive players: Kaden Elliss (LB) #55, Carl Granderson (Edge) #96, Tyrann Mathieu (S) #32")
+    print("3 worst defensive players: Jabari Zuniga (Edge) #69, DaMarcus Fields (CB) #39, Christian Ringo (DL) #57")
 
 
 elif team == "new york giants" and report == 'offensive' and down == 'yes':
     print("Gameplan: Great run-offense lead by Saquon. Force the Giants to pass the ball (67.3 pass-offense grade) ")
 
+
+    print("3 best offensive players: Andrew Thomas (OT) #78, Saquon Barkley (RB) #26, Isaiah Hodgins (WR) #18")
+    print("3 worst offensive players: Evan Neal (OT) #73, Shane Lemieux (OG) #66, Joshua Ezeudu (OG) #75")
+    print("3rd offensive down conversion rate (8-10 yards): 36.66%")
+    print("3rd offensive down conversion rate (11+ yards): 24%")
+
+
+
 elif team == "new york giants" and report == 'offensive' and down == 'no':
     print("Gameplan: Great run-offense lead by Saquon. Force the Giants to pass the ball (67.3 pass-offense grade) ")
+
+    print("3 best offensive players: Andrew Thomas (OT) #78, Saquon Barkley (RB) #26, Isaiah Hodgins (WR) #18")
+    print("3 worst offensive players: Evan Neal (OT) #73, Shane Lemieux (OG) #66, Joshua Ezeudu (OG) #75")
 
 elif team == "new york giants" and report == 'defensive' and down == 'yes':
     print("Gameplan: Terrible run-defense and pass-coverage (46.4 run-defense and 46.3 grade)")
 
+    print("3 best defensive players: Dexter Lawrence (DL) #97, Leonard Williams (DL) #99, Adoree' Jackson (CB) #22")
+    print("3 worst defensive players: Austin Calitro (LB) #59, Tae Crowder (LB) #48, Dane Belton (S) #24")
+
+    print("3rd offensive down conversion rate (8-10 yards): 36.66%")
+    print("3rd offensive down conversion rate (11+ yards): 24%")
+
+
 elif team == "new york giants" and report == 'defensive' and down == 'no':
     print("Gameplan: Terrible run-defense and pass-coverage (46.4 run-defense and 46.3 grade)")
 
+    print("3 best defensive players: Dexter Lawrence (DL) #97, Leonard Williams (DL) #99, Adoree' Jackson (CB) #22")
+    print("3 worst defensive players: Austin Calitro (LB) #59, Tae Crowder (LB) #48, Dane Belton (S) #24")
+
 
 elif team == "new york jets" and report == 'offensive' and down == 'yes':
-    print("Gameplan: Stop the run and force the tam to pass (49.8 pass-offense grade)")
+  print("Gameplan: Stop the run and force the tam to pass (49.8 pass-offense grade)")
 
 elif team == "new york jets" and report == 'offensive' and down == 'no':
-    print("Gameplan: Stop the run and force the tam to pass (49.8 pass-offense grade)")
+  print("Gameplan: Stop the run and force the tam to pass (49.8 pass-offense grade)")
 
 elif team == "new york jets" and report == 'defensive' and down == 'yes':
-    print("Gameplan: Great defense but defenders struggle in tackling (54.8 tackling grade). Give the ball to playmakers out in space.")
+  print("Gameplan: Great defense but defenders struggle in tackling (54.8 tackling grade). Give the ball to playmakers out in space.")
 
 elif team == "new york jets" and report == 'defensive' and down == 'no':
-    print("Gameplan: Great defense but defenders struggle in tackling (54.8 tackling grade). Give the ball to playmakers out in space.")
+  print("Gameplan: Great defense but defenders struggle in tackling (54.8 tackling grade). Give the ball to playmakers out in space.")
 
 
 elif team == "philadelphia eagles" and report == 'offensive' and down == 'yes':
-    print("Gameplan: Elite all- around offense, but it's important to stop the quaterback run offense (73.1 run-blocking grade)")
+  print("Gameplan: Elite all- around offense, but it's important to stop the quarterback run offense (73.1 run-blocking grade)")
 
 elif team == "philadelphia eagles" and report == 'offensive' and down == 'no':
-    print("Gameplan: Elite all- around offense, but it's important to stop the quaterback run offense (73.1 run-blocking grade)")
+  print("Gameplan: Elite all- around offense, but it's important to stop the quarterback run offense (73.1 run-blocking grade)")
 
 elif team == "philadelphia eagles" and report == 'defensive' and down == 'yes':
-    print("Gameplan: Elite defense in everywhere but the run-defense. So run early and often (64.6 run-defense grade)")
+  print("Gameplan: Elite defense in everywhere but the run-defense. So run early and often (64.6 run-defense grade)")
 
 elif team == "philadelphia eagles" and report == 'defensive' and down == 'no':
-    print("Gameplan: Elite defense in everywhere but the run-defense. So run early and often (64.6 run-defense grade)")
+  print("Gameplan: Elite defense in everywhere but the run-defense. So run early and often (64.6 run-defense grade)")
 
 
 elif team == "pittsburgh steelers" and report == 'offensive' and down == 'yes':
-    print("Gameplan: Stop the run by all means (82.6 run-offense grade)")
+  print("Gameplan: Stop the run by all means (82.6 run-offense grade)")
 
 elif team == "pittsburgh steelers" and report == 'offensive' and down == 'no':
-    print("Gameplan: Stop the run by all means (82.6 run-offense grade)")
+  print("Gameplan: Stop the run by all means (82.6 run-offense grade)")
 
 elif team == "pittsburgh steelers" and report == 'defensive' and down == 'yes':
-    print("Gameplan: Avoid TJ Watt by all means. Focus on attacking the secondary (64.0 pass-coverage grade)")
+  print("Gameplan: Avoid TJ Watt by all means. Focus on attacking the secondary (64.0 pass-coverage grade)")
 
 elif team == "pittsburgh steelers" and report == 'defensive' and down == 'no':
-    print("Gameplan: Avoid TJ Watt by all means. Focus on attacking the secondary (64.0 pass-coverage grade)")
+  print("Gameplan: Avoid TJ Watt by all means. Focus on attacking the secondary (64.0 pass-coverage grade)")
 
 
 elif team == "san francisco 49ers" and report == 'offensive' and down == 'yes':
-    print("Gameplan: No real offense weaknesses besides forcing the QB to be a playmaker (68.0 pass-offense grade)")
+  print("Gameplan: No real offense weaknesses besides forcing the QB to be a playmaker (68.0 pass-offense grade)")
 
 elif team == "san francisco 49ers" and report == 'offensive' and down == 'no':
-    print("Gameplan: No real offense weaknesses besides forcing the QB to be a playmaker (68.0 pass-offense grade)")
+  print("Gameplan: No real offense weaknesses besides forcing the QB to be a playmaker (68.0 pass-offense grade)")
 
 elif team == "san francisco 49ers" and report == 'defensive' and down == 'yes':
-    print("Gameplan: Avoid Nick Bosa and Fred Warner! Run at the opposite perimeter of Nick Bosa (78.6 run-defense grade)")
+  print("Gameplan: Avoid Nick Bosa and Fred Warner! Run at the opposite perimeter of Nick Bosa (78.6 run-defense grade)")
 
 elif team == "san francisco 49ers" and report == 'defensive' and down == 'no':
-    print("Gameplan: Avoid Nick Bosa and Fred Warner! Run at the opposite perimeter of Nick Bosa (78.6 run-defense grade)")
+  print("Gameplan: Avoid Nick Bosa and Fred Warner! Run at the opposite perimeter of Nick Bosa (78.6 run-defense grade)")
 
 
 elif team == "seattle seahawks" and report == 'offensive' and down == 'yes':
-    print("Gameplan: Attack the inside of their offensive line in passing situations (66.0 pass-blocking grade).")
+  print("Gameplan: Attack the inside of their offensive line in passing situations (66.0 pass-blocking grade).")
 
 elif team == "seattle seahawks" and report == 'offensive' and down == 'no':
-    print("Gameplan: Attack the inside of their offensive line in passing situations (66.0 pass-blocking grade).")
+  print("Gameplan: Attack the inside of their offensive line in passing situations (66.0 pass-blocking grade).")
 
 elif team == "seattle seahawks" and report == 'defensive' and down == 'yes':
-    print("Gameplan: Run the ball as much as possible (59.1 run-offense grade)")
+  print("Gameplan: Run the ball as much as possible (59.1 run-offense grade)")
 
 elif team == "seattle seahawks" and report == 'defensive' and down == 'no':
-    print("Gameplan: Run the ball as much as possible (59.1 run-offense grade)")
+  print("Gameplan: Run the ball as much as possible (59.1 run-offense grade)")
 
 
 elif team == "tampa bay buccaneers" and report == 'offensive' and down == 'yes':
-    print("Gameplan: Get the ball out of Brady's hands and force the Bucs to run (61.5 run-offense)")
+  print("Gameplan: Get the ball out of Brady's hands and force the Bucs to run (61.5 run-offense)")
 
 elif team == "tampa bay buccaneers" and report == 'offensive' and down == 'no':
-    print("Gameplan: Get the ball out of Brady's hands and force the Bucs to run (61.5 run-offense)")
+  print("Gameplan: Get the ball out of Brady's hands and force the Bucs to run (61.5 run-offense)")
 
 elif team == "tampa bay buccaneers" and report == 'defensive' and down == 'yes':
-    print("Gameplan: Run the ball against this defense (58.6 run-defense grade)")
+  print("Gameplan: Run the ball against this defense (58.6 run-defense grade)")
 
 elif team == "tampa bay buccaneers" and report == 'defensive' and down == 'no':
-    print("Gameplan: Run the ball against this defense (58.6 run-defense grade)")
+  print("Gameplan: Run the ball against this defense (58.6 run-defense grade)")
 
 
 elif team == "tennessee titans" and report == 'offensive' and down == 'yes':
-    print("Gaameplan: Get the ball out of Derrick Henry's hands and force the Titians to pass (68.7 pass-offense grade)")
+  print("Gaameplan: Get the ball out of Derrick Henry's hands and force the Titians to pass (68.7 pass-offense grade)")
 
 elif team == "tennessee titans" and report == 'offensive' and down == 'no':
-    print("Gaameplan: Get the ball out of Derrick Henry's hands and force the Titians to pass (68.7 pass-offense grade)")
+  print("Gaameplan: Get the ball out of Derrick Henry's hands and force the Titians to pass (68.7 pass-offense grade)")
 
 elif team == "tennessee titans" and report == 'defensive' and down == 'yes':
-    print("Gameplan: Attack the secondary in passing downs (69.9 pass-coverage grade)")
+  print("Gameplan: Attack the secondary in passing downs (69.9 pass-coverage grade)")
 
 elif team == "tennessee titans" and report == 'defensive' and down == 'no':
-    print("Gameplan: Attack the secondary in passing downs (69.9 pass-coverage grade)")
+  print("Gameplan: Attack the secondary in passing downs (69.9 pass-coverage grade)")
 
 
 elif team == "washington commanders" and report == 'offensive' and down == 'yes':
-    print("Stop the run to force the pass (54.0 pass-offense grade)")
+  print("Gameplan: Stop the run to force the pass (54.0 pass-offense grade)")
 
 elif team == "washington commanders" and report == 'offensive' and down == 'no':
-    print("Stop the run to force the pass (54.0 pass-offense grade)")
+  print("Gameplan: Stop the run to force the pass (54.0 pass-offense grade)")
 
 elif team == "washington commanders" and report == 'defensive' and down == 'yes':
-    print("Run the ball away from Chase Young in order to gain positive yards (57.7 run-defense grade)")
+  print("Gameplan: Run the ball away from Chase Young in order to gain positive yards (57.7 run-defense grade)")
 
 elif team == "washington commanders" and report == 'defensive' and down == 'no':
-    print("Run the ball away from Chase Young in order to gain positive yards (57.7 run-defense grade)")
+  print("Gameplan: Run the ball away from Chase Young in order to gain positive yards (57.7 run-defense grade)")
 
 else:
-    print('Opps! Invalid operation user inputs. Please follow instructions and try again. ')
+  print('Opps! Invalid operation user inputs. Please follow instructions and try again. ')
+  
